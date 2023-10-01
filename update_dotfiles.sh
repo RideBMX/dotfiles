@@ -5,7 +5,7 @@ repo_path="$HOME/dotfiles"
 if [ -d "$repo_path/.git" ]; then
     # Git repository exists, pull the latest changes
     cd "$repo_path" || exit
-    git pull origin master
+    git pull origin main
 else
     # Git repository does not exist, initialize and create README.md
     git init "$repo_path"
@@ -39,4 +39,4 @@ done
 cd "$repo_path" || exit
 git add .
 git commit -m "Add dotfiles"
-git push origin master
+git push origin main
